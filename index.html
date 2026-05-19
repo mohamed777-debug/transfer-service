@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمة التحويل - Money Transfer Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="title">خدمة التحويل</h1>
+            <div class="header-info">
+                <p class="phone-number">رقمك الثابت للتحويل: <strong>01226904832</strong></p>
+                <p class="commission">نسبتي 5 جنيه على التحويلة الواحدة</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>أرسل طلب التحويل</h2>
+                <form id="transferForm" class="transfer-form">
+                    <div class="form-group">
+                        <label for="orangeCash">رقم محفظة أورانج كاش</label>
+                        <input 
+                            type="tel" 
+                            id="orangeCash" 
+                            name="orangeCash" 
+                            placeholder="أدخل رقم أورانج كاش" 
+                            required
+                            pattern="[0-9]{10,15}"
+                            title="يجب أن يكون الرقم من 10 إلى 15 أرقام"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instapay">رقم محفظة إنستا باي</label>
+                        <input 
+                            type="tel" 
+                            id="instapay" 
+                            name="instapay" 
+                            placeholder="أدخل رقم إنستا باي" 
+                            required
+                            pattern="[0-9]{10,15}"
+                            title="يجب أن يكون الرقم من 10 إلى 15 أرقام"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">المبلغ المطلوب (جنيه مصري)</label>
+                        <input 
+                            type="number" 
+                            id="amount" 
+                            name="amount" 
+                            placeholder="أدخل المبلغ" 
+                            required
+                            min="1"
+                            step="0.01"
+                        >
+                    </div>
+
+                    <button type="submit" class="submit-btn">إرسال الطلب</button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-content">
+                        <h3>✓ تم إرسال طلبك بنجاح</h3>
+                        <p>سيتم التواصل معك قريباً لتأكيد التحويل</p>
+                        <button type="button" class="reset-btn" onclick="resetForm()">إرسال طلب جديد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 خدمة التحويل. جميع الحقوق محفوظة.</p>
+            <p>للتواصل: <strong>01226904832</strong> | البريد: <strong>mkhatap53@gmail.com</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
